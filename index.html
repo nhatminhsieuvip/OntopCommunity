@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On Top iOS - Cộng đồng Công nghệ & Dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f1117;
+      color: #eee;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: radial-gradient(circle at top, #1a1a2e, #0f1117);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 136, 255, 0.4), transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+    }
+
+    header img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px rgba(0, 136, 255, 0.7));
+      z-index: 2;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: 800;
+      z-index: 2;
+      position: relative;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-top: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 30px rgba(0, 136, 255, 0.08);
+      margin-bottom: 40px;
+      padding: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+    .card:nth-child(4) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 136, 255, 0.3);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #00bfff;
+      font-size: 1.5em;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .social-btn img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+    }
+
+    .facebook { background: #1877f2; }
+    .facebook:hover { background: #0e63d4; }
+
+    .tiktok { background: #000; }
+    .tiktok:hover { background: #111; }
+
+    .telegram { background: #229ED9; }
+    .telegram:hover { background: #178dc7; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #1a1a2e;
+      color: #999;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .social-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/j9RHXR1R/F165-F118-9-D80-4-E95-BD4-A-BD46171-AA0-D3.png" alt="On Top iOS Logo" />
+    <h1>On Top iOS</h1>
+    <p>Cộng đồng chia sẻ công nghệ, lập trình, TUT, TRICK và DEV Tool</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>🌐 Về chúng tôi</h2>
+      <p>
+        <strong>On Top iOS</strong> là nơi quy tụ những bạn trẻ đam mê công nghệ, lập trình và khám phá thế giới số.
+        Tại đây, chúng tôi chia sẻ các thủ thuật (trick), hướng dẫn chi tiết (tut), công cụ hỗ trợ dev, và kinh nghiệm thực chiến.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Bạn sẽ tìm thấy gì?</h2>
+      <ul>
+        <li>📘 Tut & Trick: từ mobile, web, bypass đến system hack</li>
+        <li>🛠 Công cụ dev: iOS, Android, script, automation, mod,…</li>
+        <li>🎓 Lập trình: Python, HTML, JS, AI, API,…</li>
+        <li>🔐 Bảo mật, backend, tối ưu dev workflow</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>👑 Chủ sở hữu</h2>
+      <p>
+        Cộng đồng được sáng lập bởi <strong>Cao Nhật Minh</strong> (sinh năm 2009) – người xây dựng <strong>On Top iOS</strong>
+        với sứ mệnh tạo ra một sân chơi công nghệ sáng tạo, chất và đậm bản sắc dev trẻ Việt.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📲 Kết nối với chúng tôi</h2>
+      <div class="social-buttons">
+        <a class="social-btn facebook" href="https://facebook.com/minh21092k9" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" />
+          Facebook
+        </a>
+        <a class="social-btn tiktok" href="https://www.tiktok.com/@ipa.ios.ontop" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" />
+          TikTok
+        </a>
+        <a class="social-btn telegram" href="https://t.me/ontop2k9" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Telegram Cá Nhân" />
+          Telegram Cá nhân
+        </a>
+        <a class="social-btn telegram" href="https://t.me/ontopcommunity" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg" alt="Kênh Telegram" />
+          Kênh Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 On Top iOS – Made by the devs, for the devs. Build cool stuff 🔧
+  </footer>
+
+</body>
+</html>
